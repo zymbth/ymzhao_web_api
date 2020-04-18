@@ -99,7 +99,7 @@ public class WebsiteApplication {
         strategy.setNaming(NamingStrategy.underline_to_camel); // 数据库表映射到实体的命名策略
         strategy.setColumnNaming(NamingStrategy.underline_to_camel); // 数据库表字段映射...
         //        strategy.setSuperEntityClass("你自己的父类实体,没有就不用设置!");
-        //        strategy.setEntityLombokModel(true);
+        strategy.setEntityLombokModel(true);
         strategy.setRestControllerStyle(true); // 生成 @RestController 控制器
         //        公共父类
         //        strategy.setSuperControllerClass("你自己的父类控制器,没有就不用设置!");

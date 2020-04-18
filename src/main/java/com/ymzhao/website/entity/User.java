@@ -1,8 +1,12 @@
 package com.ymzhao.website.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import java.io.Serializable;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
 
 /**
  * <p>
@@ -12,75 +16,28 @@ import java.io.Serializable;
  * @author ymzhao
  * @since 2020-03-19
  */
-public class User implements Serializable {
+@Data
+@ApiModel(value = "用户类", description = "用户的入参类与返回类")
+@JsonIgnoreProperties(ignoreUnknown = true)
+@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
+public class User extends BaseEntity {
 
-    private static final long serialVersionUID = 1L;
+    /*private static final long serialVersionUID = 1L;*/
 
-    @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
-
+    @ApiModelProperty(value = "用户类型", position = 2)
     private Integer usrtype;
 
+    @ApiModelProperty(value = "用户名", position = 3)
     private String usrname;
 
+    @JsonIgnore
+    @ApiModelProperty(value = "用户密码", position = 4)
     private String pwd;
 
+    @ApiModelProperty(value = "电话", position = 5)
     private String tel;
 
+    @ApiModelProperty(value = "邮箱", position = 6)
     private String email;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-    public Integer getUsrtype() {
-        return usrtype;
-    }
-
-    public void setUsrtype(Integer usrtype) {
-        this.usrtype = usrtype;
-    }
-    public String getUsrname() {
-        return usrname;
-    }
-
-    public void setUsrname(String usrname) {
-        this.usrname = usrname;
-    }
-    public String getPwd() {
-        return pwd;
-    }
-
-    public void setPwd(String pwd) {
-        this.pwd = pwd;
-    }
-    public String getTel() {
-        return tel;
-    }
-
-    public void setTel(String tel) {
-        this.tel = tel;
-    }
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-            "id=" + id +
-            ", usrtype=" + usrtype +
-            ", usrname=" + usrname +
-            ", pwd=" + pwd +
-            ", tel=" + tel +
-            ", email=" + email +
-        "}";
-    }
 }
