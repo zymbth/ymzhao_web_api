@@ -1,21 +1,8 @@
 package com.ymzhao.website;
 
-import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
-import com.baomidou.mybatisplus.core.toolkit.StringPool;
-import com.baomidou.mybatisplus.core.toolkit.StringUtils;
-import com.baomidou.mybatisplus.generator.AutoGenerator;
-import com.baomidou.mybatisplus.generator.InjectionConfig;
-import com.baomidou.mybatisplus.generator.config.*;
-import com.baomidou.mybatisplus.generator.config.po.TableInfo;
-import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
-import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
 @SpringBootApplication
 @MapperScan("com.ymzhao.website.mapper")
@@ -26,7 +13,7 @@ public class WebsiteApplication {
         SpringApplication.run(WebsiteApplication.class, args);
     }
 
-    public static String scanner(String tip) {
+    /*public static String scanner(String tip) {
         Scanner scanner = new Scanner(System.in);
         StringBuilder help = new StringBuilder();
         help.append("请输入" + tip + "：");
@@ -38,9 +25,9 @@ public class WebsiteApplication {
             }
         }
         throw new MybatisPlusException("请输入正确的" + tip + "！");
-    }
+    }*/
 
-    public static void codeGenerator() {
+    /*public static void codeGenerator() {
         //        代码生成器
         AutoGenerator mpg = new AutoGenerator();
 
@@ -111,5 +98,5 @@ public class WebsiteApplication {
         mpg.setStrategy(strategy);
         mpg.setTemplateEngine(new FreemarkerTemplateEngine());
         mpg.execute();
-    }
+    }*/
 }
