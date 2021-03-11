@@ -1,19 +1,19 @@
 server:
   port: 13145
   servlet:
-    context-path: /
+    context-path: /zymwb
 
-spring:
-  jpa:
-    database: mysql
-  datasource:
+#spring:
+#  jpa:
+#    database: mysql
+#  datasource:
 #    url: jdbc:mysql://localhost:3306/ymzhaodb?characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
 #    username: root
 #    password: zym1993
-    url: jdbc:mysql://rm-bp1bvn2v7uyj6rde0125010.mysql.rds.aliyuncs.com:3306/ymzhaodb?characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
-    username: ymzhao
-    password: ymZhao1993
-    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://rm-bp1bvn2v7uyj6rde0125010.mysql.rds.aliyuncs.com:3306/ymzhaodb?characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+#    username: ymzhao
+#    password: ymZhao1993
+#    driver-class-name: com.mysql.cj.jdbc.Driver
 #mybatis-plus整合，加了表前缀的全局配制，加了类中与表中驼峰的映射，不加会查不出数据，因无法做表与类字段映射
 mybatis-plus:
 #  global-config:
