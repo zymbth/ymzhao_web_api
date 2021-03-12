@@ -1,7 +1,7 @@
 server:
   port: 13145
   servlet:
-    context-path: /zymwb
+    context-path: /
 
 #spring:
 #  jpa:

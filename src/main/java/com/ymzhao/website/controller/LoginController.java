@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2020-03-19
  */
 @RestController
-@RequestMapping("/login")
+@RequestMapping("/zymwb/login")
 @Api(tags = {"用户登录服务"})
 public class LoginController {
 

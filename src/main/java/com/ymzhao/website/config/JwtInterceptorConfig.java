@@ -23,7 +23,8 @@ public class JwtInterceptorConfig extends WebMvcConfigurationSupport {
                 .addPathPatterns("/test/demo");*/
         registry.addInterceptor(jwtInterceptor)
                 .addPathPatterns("/**") //所有路径都被拦截
-                .excludePathPatterns("/login/*") // 排除用户登录请求
-                .excludePathPatterns("/register/*"); // 排除用户注册请求
+                .excludePathPatterns("/zymwb/login/**") // 排除用户登录请求
+                .excludePathPatterns("/zymwb/register/**") // 排除用户注册请求
+                .excludePathPatterns("/error");
     }
 }
