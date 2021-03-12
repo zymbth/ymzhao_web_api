@@ -1,7 +1,6 @@
 package com.ymzhao.website.controller;
 
 
-import com.ymzhao.website.entity.User;
 import com.ymzhao.website.model.APIResult;
 import com.ymzhao.website.service.LoginService;
 import io.swagger.annotations.Api;
@@ -31,7 +30,7 @@ public class LoginController {
         this.loginService = loginService;
     }
 
-    @ApiOperation(value = "登录", response = User.class, responseContainer = "List")
+    @ApiOperation(value = "登录")
     @RequestMapping(value = "/log_in", method = RequestMethod.POST)
     public APIResult<String> logIn(@RequestParam String username,
                                  @RequestParam String password) {

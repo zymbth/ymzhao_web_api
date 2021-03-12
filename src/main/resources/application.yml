@@ -15,11 +15,11 @@ server:
 #    password: ymZhao1993
 #    driver-class-name: com.mysql.cj.jdbc.Driver
 #mybatis-plus整合，加了表前缀的全局配制，加了类中与表中驼峰的映射，不加会查不出数据，因无法做表与类字段映射
-mybatis-plus:
+#mybatis-plus:
 #  global-config:
 #    db-config:
 #      table-prefix:
-  mapper-locations: classpath*:mapper/*Mapper.xml
-  type-aliases-package: com.ymzhao.website
-  configuration:
-    map-underscore-to-camel-case: true
+#  mapper-locations: classpath*:mapper/*Mapper.xml
+#  type-aliases-package: com.ymzhao.website
+#  configuration:
+#    map-underscore-to-camel-case: true
