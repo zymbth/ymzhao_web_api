@@ -28,6 +28,8 @@ public class JwtInterceptor implements HandlerInterceptor {
 
         String uri = request.getRequestURI();
 
+        System.out.println("uri: " + uri);
+
         String headToken = request.getHeader("Authorization");
         if(StringUtils.isEmpty(headToken)) {
             Map<String, Object> map = new HashMap<>();

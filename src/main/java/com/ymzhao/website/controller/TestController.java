@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2021-03-11
  */
 @RestController
-@RequestMapping("/zymwb/test")
+@RequestMapping("/test")
 @Api(tags = {"测试服务"})
 public class TestController {
 
